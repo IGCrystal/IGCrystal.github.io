@@ -42,7 +42,7 @@ jobs:
         run: npm run build
 
       - name: Debug Build Output
-        run: ls -al ./vuepress/dist
+        run: ls -al .vuepress/dist
 
       # 部署到 GitHub Pages
       - name: Deploy
