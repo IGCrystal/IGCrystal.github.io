@@ -41,11 +41,14 @@ jobs:
       - name: Build VuePress
         run: npm run build
 
+      - name: Debug Build Output
+        run: ls -al ./vuepress/dist
+
       # 部署到 GitHub Pages
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           BRANCH: gh-pages
-          FOLDER: /.vuepress/dist
+          FOLDER: .vuepress/dist
 
